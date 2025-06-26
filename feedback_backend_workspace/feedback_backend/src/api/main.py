@@ -10,6 +10,7 @@ from contextlib import contextmanager
 
 DATABASE_FILE = "feedback.db"
 
+
 @contextmanager
 def get_db():
     """Yields a database connection with proper closing."""
