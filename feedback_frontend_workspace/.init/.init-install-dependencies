@@ -1,0 +1,4 @@
+{
+    "command": "npm install",
+    "working_directory": "/home/kavia/workspace/code-generation/feedbackflow-35020-d7e7e7e8/feedback_frontend_workspace/feedback_frontend"
+}

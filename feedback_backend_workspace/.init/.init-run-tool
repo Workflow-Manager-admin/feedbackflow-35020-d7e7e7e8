@@ -1,0 +1,4 @@
+{
+    "command": "source venv/bin/activate && uvicorn src.api.main:app --host <host> --port <port>",
+    "working_directory": "/home/kavia/workspace/code-generation/feedbackflow-35020-d7e7e7e8/feedback_backend_workspace/feedback_backend"
+}
