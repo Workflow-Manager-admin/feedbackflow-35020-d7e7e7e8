@@ -57,7 +57,7 @@ function App() {
       const res = await fetch(`${BACKEND_URL}/feedback`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ feedback: feedback.trim() }),
+        body: JSON.stringify({ text: feedback.trim() }),
       });
       if (!res.ok) throw new Error("Submission failed.");
       setFeedback("");

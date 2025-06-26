@@ -4,3 +4,23 @@ INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:3001 (Press CTRL+C to quit)
 INFO:     100.64.39.19:49688 - "GET /docs HTTP/1.1" 200 OK
 INFO:     100.64.39.19:49696 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34158 - "OPTIONS /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34154 - "OPTIONS /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34166 - "GET /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34176 - "GET /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34180 - "OPTIONS /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34194 - "OPTIONS /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34210 - "OPTIONS /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34214 - "OPTIONS /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34224 - "GET /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34232 - "GET /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34236 - "GET /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:34246 - "GET /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:36048 - "POST /feedback HTTP/1.1" 422 Unprocessable Entity
+INFO:     100.64.39.19:57162 - "POST /feedback HTTP/1.1" 422 Unprocessable Entity
+INFO:     100.64.39.19:37180 - "HEAD /openapi.json HTTP/1.1" 200 OK
+INFO:     100.64.39.19:37184 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     100.64.39.19:35018 - "POST /feedback HTTP/1.1" 201 Created
+INFO:     100.64.39.19:35022 - "GET /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:35024 - "GET /feedback HTTP/1.1" 200 OK
+INFO:     100.64.39.19:35034 - "GET /feedback HTTP/1.1" 200 OK
