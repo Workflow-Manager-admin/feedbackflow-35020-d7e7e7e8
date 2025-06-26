@@ -1,104 +1,82 @@
 /* CSS Variables for Theme Management */
 :root {
-  /* Light theme colors */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --text-primary: #282c34;
-  --text-secondary: #61dafb;
-  --border-color: #e9ecef;
-  --button-bg: #007bff;
+  /* Light theme colors – based on provided palette */
+  --primary: #2563eb;
+  --secondary: #64748b;
+  --accent: #fbbf24;
+  --bg-primary: #f6f8fc;
+  --bg-secondary: #ffffff;
+  --text-primary: #222e42;
+  --text-muted: #64748b;
+  --border-color: #dadfe8;
+  --input-bg: #f8fafc;
+  --input-border: #cbd5e1;
+  --button-bg: var(--primary);
+  --button-hover: #1857b8;
   --button-text: #ffffff;
 }
 
-[data-theme="dark"] {
-  /* Dark theme colors */
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #282c34;
-  --text-primary: #ffffff;
-  --text-secondary: #61dafb;
-  --border-color: #404040;
-  --button-bg: #0056b3;
-  --button-text: #ffffff;
-}
-
-.App {
-  text-align: center;
+/* Minimal/modern feedback app styles */
+body, #root, .App {
   background-color: var(--bg-primary);
-  color: var(--text-primary);
-  min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Fixed header (handled inline for precise layout) */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Form section (handled inline but add hover/focus styles) */
+textarea#feedback-input:focus {
+  border-color: var(--primary);
+  background-color: #fff;
 }
-
-.App-header {
-  background-color: var(--bg-secondary);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: var(--text-primary);
-  transition: background-color 0.3s ease;
-  position: relative;
+textarea#feedback-input:disabled {
+  background: #e7eaf2;
+  color: var(--text-muted);
 }
-
-.App-link {
-  color: var(--text-secondary);
-  transition: color 0.3s ease;
-}
-
-.theme-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: var(--button-bg);
-  color: var(--button-text);
+button[type=submit] {
+  background: var(--primary);
+  color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: 9px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  padding: 0.7rem 0;
+  transition: background 0.18s, opacity 0.2s;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+button[type=submit]:hover:enabled,
+button[type=submit]:focus:enabled {
+  background: var(--button-hover);
+  outline: none;
+}
+button[type=submit]:disabled {
+  background: var(--primary);
+  opacity: 0.78;
+  cursor: not-allowed;
 }
 
-.theme-toggle:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  opacity: 0.9;
+/* Feedback list entries (handled inline, just some common tweaks) */
+ul {
+  list-style: none;
+}
+li {
+  margin: 0;
 }
 
-.theme-toggle:active {
-  transform: translateY(0);
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  main {
+    margin-top: 5.5rem !important;
   }
-  to {
-    transform: rotate(360deg);
+  section {
+    max-width: 99vw !important;
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
   }
 }
 
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-  .theme-toggle {
-    top: 10px;
-    right: 10px;
-    padding: 8px 16px;
-    font-size: 12px;
+@media (max-width: 540px) {
+  header span {
+    font-size: 1.1rem !important;
+    margin-left: 0.7rem !important;
   }
 }
